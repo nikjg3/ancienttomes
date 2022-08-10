@@ -1,9 +1,10 @@
-package com.example.magicitemsort;
+package com.example.ancienttomes;
 
-import com.example.magicitemsort.items.ModItems;
-import com.example.magicitemsort.world.feature.ModConfiguredFeatures;
-import com.example.magicitemsort.world.feature.ModPlacedFeatures;
-import com.example.magicitemsort.block.ModBlocks;
+import com.example.ancienttomes.items.ModItems;
+import com.example.ancienttomes.world.feature.ModConfiguredFeatures;
+import com.example.ancienttomes.world.feature.ModPlacedFeatures;
+import com.example.ancienttomes.block.ModBlocks;
+import com.example.ancienttomes.entitiy.custom.MobEntityTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
@@ -35,17 +36,17 @@ import org.antlr.v4.parse.ANTLRParser.modeSpec_return;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(MagicItemSort.MODID)
-public class MagicItemSort
+@Mod(AncientTomes.MODID)
+public class AncientTomes
 {
     // Define mod id in a common place for everything to reference
-    public static final String MODID = "magicitemsort";
+    public static final String MODID = "ancienttomes";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
 
 
-    public MagicItemSort()
+    public AncientTomes()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 

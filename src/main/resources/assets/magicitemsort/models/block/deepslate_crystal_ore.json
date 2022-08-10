@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all":  "magicitemsort:block/deepslate_crystal_ore"
+        "all":  "ancienttomes:block/deepslate_crystal_ore"
     }
 }

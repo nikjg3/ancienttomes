@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all":  "magicitemsort:block/magic_bookshelf"
+        "all":  "ancienttomes:block/magic_bookshelf"
     }
 }

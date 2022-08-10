@@ -1,12 +1,12 @@
 {
-    "item.magicitemsort.magic_wand": "Magic Wand",
-    "item.magicitemsort.magic_stick": "Magic Stick",
-    "item.magicitemsort.magic_core": "Magic Core",
+    "item.ancienttomes.magic_wand": "Magic Wand",
+    "item.ancienttomes.magic_stick": "Magic Stick",
+    "item.ancienttomes.magic_core": "Magic Core",
 
-    "block.magicitemsort.magic_bookshelf": "Magic Bookshelf",
-    "block.magicitemsort.crystal_ore": "Crystal Ore",
-    "block.magicitemsort.deepslate_crystal_ore": "Deepslate Crystal Ore",
-    "block.magicitemsort.glyph_stone": "Glyph Stone",
+    "block.ancienttomes.magic_bookshelf": "Magic Bookshelf",
+    "block.ancienttomes.crystal_ore": "Crystal Ore",
+    "block.ancienttomes.deepslate_crystal_ore": "Deepslate Crystal Ore",
+    "block.ancienttomes.glyph_stone": "Glyph Stone",
 
     "itemGroup.MagicItemsTab": "Magic Items",
     "itemGroup.MagicBlocksTab": "Magic Blocks"

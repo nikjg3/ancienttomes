@@ -1,7 +1,7 @@
 {
     "replace": "false",
     "values":  [
-        "magicitemsort:crystal_ore",
-        "magicitemsort:glyph_stone"
+        "ancienttomes:crystal_ore",
+        "ancienttomes:glyph_stone"
     ]
 }

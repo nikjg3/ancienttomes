@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all":  "magicitemsort:block/glyph_stone1"
+        "all":  "ancienttomes:block/glyph_stone1"
     }
 }

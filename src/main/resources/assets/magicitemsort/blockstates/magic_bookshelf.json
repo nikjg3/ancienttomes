@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": {  "model" : "magicitemsort:block/magic_bookshelf"}
+        "": {  "model" : "ancienttomes:block/magic_bookshelf"}
     }
 }

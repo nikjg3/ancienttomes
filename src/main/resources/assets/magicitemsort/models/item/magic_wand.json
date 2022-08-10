@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "magicitemsort:item/magic_wand"
+        "layer0": "ancienttomes:item/magic_wand"
     }
 }
