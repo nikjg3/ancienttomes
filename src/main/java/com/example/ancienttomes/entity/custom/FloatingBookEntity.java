@@ -30,7 +30,15 @@ public class FloatingBookEntity extends Animal implements IAnimatable {
     public FloatingBookEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
-    
+   
+    public static AttributeSupplier setAttributes() {
+        return Animal.createMobAttributes()
+                .add(Attributes.MAX_HEALTH, 20.0D)
+                .add(Attributes.ATTACK_DAMAGE, 3.0f)
+                .add(Attributes.ATTACK_SPEED, 2.0f)
+                .add(Attributes.MOVEMENT_SPEED, 0.3f).build();
+    }
+
     //Mob Goals
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new FloatGoal(this));
@@ -41,17 +49,10 @@ public class FloatingBookEntity extends Animal implements IAnimatable {
         this.targetSelector.addGoal(6, (new HurtByTargetGoal(this)).setAlertOthers());
     }
 
-    public static AttributeSupplier setAttributes() {
-        return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 20.0D)
-                .add(Attributes.ATTACK_DAMAGE, 3.0f)
-                .add(Attributes.ATTACK_SPEED, 2.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.3f).build();
-    }
     
+    @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel p_146743_, AgeableMob p_146744_) {
-        // TODO Auto-generated method stub
         return null;
     }
     
@@ -76,11 +77,23 @@ public class FloatingBookEntity extends Animal implements IAnimatable {
         return this.factory;
     }
 
+    protected void playStepSound(BlockPos pos, BlockState blockIn) {
+        this.playSound(SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, 0.15F, 1.0F);
+    }
+
+    protected SoundEvent getAmbientSound() {
+        return SoundEvents.CAT_STRAY_AMBIENT;
+    }
+
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
         return SoundEvents.DOLPHIN_HURT;
     }
 
     protected SoundEvent getDeathSound() {
         return SoundEvents.DOLPHIN_DEATH;
+    }
+
+    protected float getSoundVolume() {
+        return 0.2F;
     }
 }

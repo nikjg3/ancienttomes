@@ -13,10 +13,10 @@
             "item": "minecraft:book"
         },
         "M": {
-            "item": "magicitemsort:magic_core"
+            "item": "ancienttomes:magic_core"
         }
     },
     "result": {
-        "item": "magicitemsort:magic_bookshelf"
+        "item": "ancienttomes:magic_bookshelf"
     }
 }

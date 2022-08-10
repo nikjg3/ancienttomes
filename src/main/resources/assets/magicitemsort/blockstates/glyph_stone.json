@@ -1,9 +1,0 @@
-{
-    "variants": {
-        "": [
-            {  "model" : "ancienttomes:block/glyph_stone1"},
-            {  "model" : "ancienttomes:block/glyph_stone2"},
-            {  "model" : "ancienttomes:block/glyph_stone3"}
-        ]
-    }
-}

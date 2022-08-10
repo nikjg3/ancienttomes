@@ -7,14 +7,10 @@ import com.example.ancienttomes.block.ModBlocks;
 import com.example.ancienttomes.entity.ModEntityTypes;
 import com.example.ancienttomes.entity.client.FloatingBookRenderer;
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.common.MinecraftForge;
@@ -32,10 +28,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import software.bernie.example.registry.EntityRegistry;
+import software.bernie.geckolib3.GeckoLib;
 
 import javax.xml.catalog.CatalogFeatures.Feature;
 
-import org.antlr.v4.parse.ANTLRParser.modeSpec_return;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -55,11 +51,16 @@ public class AncientTomes
 
         ModItems.Register(modEventBus);
         ModBlocks.Register(modEventBus);
+
         ModConfiguredFeatures.Register(modEventBus);
         ModPlacedFeatures.Register(modEventBus);
-        //EntityRenderers.register(ModEntityTypes.FLOATING_BOOK.get(), FloatingBookRenderer::new);
+
+        ModEntityTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::clientSetup);
+        
+        GeckoLib.initialize();
         
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -80,15 +81,9 @@ public class AncientTomes
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class ClientModEvents
+    private void clientSetup(final FMLClientSetupEvent event)
     {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
-        }
+
+        EntityRenderers.register(ModEntityTypes.FLOATING_BOOK.get(), FloatingBookRenderer::new);
     }
 }
