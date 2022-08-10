@@ -13,12 +13,12 @@ public class FloatingBookModel extends AnimatedGeoModel<FloatingBookEntity> {
     }
 
     @Override
-    public ResourceLocation getAnimationResource(FloatingBookEntity object) {
+    public ResourceLocation getTextureResource(FloatingBookEntity object) {
         return new ResourceLocation(AncientTomes.MODID, "textures/entity/floating_book/floating_book.png");
     }
 
     @Override
-    public ResourceLocation getTextureResource(FloatingBookEntity animatable) {
+    public ResourceLocation getAnimationResource(FloatingBookEntity animatable) {
         return new ResourceLocation(AncientTomes.MODID, "animations/floating_book.animation.json");
     }
 }

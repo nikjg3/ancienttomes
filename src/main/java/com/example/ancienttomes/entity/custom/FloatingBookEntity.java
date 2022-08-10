@@ -36,7 +36,8 @@ public class FloatingBookEntity extends Animal implements IAnimatable {
                 .add(Attributes.MAX_HEALTH, 20.0D)
                 .add(Attributes.ATTACK_DAMAGE, 3.0f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.3f).build();
+                .add(Attributes.MOVEMENT_SPEED, 0.3f)
+                .add(Attributes.FLYING_SPEED, 0.3f).build();
     }
 
     //Mob Goals
