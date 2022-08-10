@@ -4,8 +4,11 @@ import com.example.ancienttomes.items.ModItems;
 import com.example.ancienttomes.world.feature.ModConfiguredFeatures;
 import com.example.ancienttomes.world.feature.ModPlacedFeatures;
 import com.example.ancienttomes.block.ModBlocks;
+import com.example.ancienttomes.entity.ModEntityTypes;
+import com.example.ancienttomes.entity.client.FloatingBookRenderer;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -28,6 +31,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import software.bernie.example.registry.EntityRegistry;
 
 import javax.xml.catalog.CatalogFeatures.Feature;
 
@@ -53,6 +57,7 @@ public class AncientTomes
         ModBlocks.Register(modEventBus);
         ModConfiguredFeatures.Register(modEventBus);
         ModPlacedFeatures.Register(modEventBus);
+        EntityRenderers.register(ModEntityTypes.FLOATING_BOOK.get(), FloatingBookRenderer::new);
 
         modEventBus.addListener(this::commonSetup);
         
