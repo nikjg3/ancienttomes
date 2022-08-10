@@ -4,7 +4,6 @@ import com.example.ancienttomes.items.ModItems;
 import com.example.ancienttomes.world.feature.ModConfiguredFeatures;
 import com.example.ancienttomes.world.feature.ModPlacedFeatures;
 import com.example.ancienttomes.block.ModBlocks;
-import com.example.ancienttomes.entitiy.custom.MobEntityTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
