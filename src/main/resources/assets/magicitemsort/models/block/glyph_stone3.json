@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all":  "magicitemsort:block/glyph_stone3"
+    }
+}
