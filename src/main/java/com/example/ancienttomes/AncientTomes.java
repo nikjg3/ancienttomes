@@ -57,7 +57,7 @@ public class AncientTomes
         ModBlocks.Register(modEventBus);
         ModConfiguredFeatures.Register(modEventBus);
         ModPlacedFeatures.Register(modEventBus);
-        EntityRenderers.register(ModEntityTypes.FLOATING_BOOK.get(), FloatingBookRenderer::new);
+        //EntityRenderers.register(ModEntityTypes.FLOATING_BOOK.get(), FloatingBookRenderer::new);
 
         modEventBus.addListener(this::commonSetup);
         
