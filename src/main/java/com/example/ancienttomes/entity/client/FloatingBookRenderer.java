@@ -28,7 +28,7 @@ public class FloatingBookRenderer extends GeoEntityRenderer<FloatingBookEntity>{
     public RenderType getRenderType(FloatingBookEntity animatable, float partialTicks, PoseStack stack,
                                     MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn,
                                     ResourceLocation textureLocation) {
-        stack.scale(0.8F, 0.8F, 0.8F);
+        stack.scale(0.6F, 0.6F, 0.6F);
         return super.getRenderType(animatable, partialTicks, stack, renderTypeBuffer, vertexBuilder, packedLightIn, textureLocation);
     }
 }

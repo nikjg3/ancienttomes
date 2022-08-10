@@ -18,7 +18,7 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<FloatingBookEntity>> FLOATING_BOOK =
             ENTITY_TYPES.register("floating_book",
             () -> EntityType.Builder.of(FloatingBookEntity::new, MobCategory.CREATURE)
-                    .sized(0.8f, 0.6f)
+                    .sized(1f, 1f)
                     .build(new ResourceLocation(AncientTomes.MODID, "floating_book").toString()));
 
 
