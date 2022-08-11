@@ -25,8 +25,15 @@ public class ModConfiguredFeatures  {
         OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_CRYSTAL_ORE.get().defaultBlockState())));
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> CRYSTAL_ORE = CONFIGURED_FEATURES.register("crystal_ore",
-        () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_CRYSTAL_ORE.get(),25)));
+        () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_CRYSTAL_ORE.get(),10)));
 
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_GLYPH_STONE = Suppliers.memoize(() -> List.of(
+        OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.GLYPH_STONE.get().defaultBlockState()),
+        OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_GLYPH_STONE.get().defaultBlockState())));
+    
+    public static final RegistryObject<ConfiguredFeature<?, ?>> GLYPH_STONE = CONFIGURED_FEATURES.register("glyph_stone",
+        () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_GLYPH_STONE.get(),40)));
+    
     public static void Register(IEventBus eventBus){
         CONFIGURED_FEATURES.register(eventBus);
     }

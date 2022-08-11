@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all":  "ancienttomes:block/glyph/deepslate_glyph_stone1"
+    }
+}

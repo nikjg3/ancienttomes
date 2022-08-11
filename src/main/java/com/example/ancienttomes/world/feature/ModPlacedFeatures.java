@@ -23,7 +23,7 @@ public class ModPlacedFeatures {
     
     public static final RegistryObject<PlacedFeature> GLYPH_STONE_PLACED = PLACED_FEATURES.register("glyph_stone_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.CRYSTAL_ORE.getHolder().get(),
-                    commonOrePlacement(7, // VeinsPerChunk
+                    commonOrePlacement(1, // VeinsPerChunk
                         HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 
 

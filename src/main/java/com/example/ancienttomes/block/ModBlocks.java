@@ -41,6 +41,7 @@ public class ModBlocks{
     //Glyph Stone (Deepslate)
     public static final RegistryObject<Block> DEEPSLATE_GLYPH_STONE = registerBlock("deepslate_glyph_stone",
     () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(4f)));
+    
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
