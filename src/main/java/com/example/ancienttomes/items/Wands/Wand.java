@@ -23,7 +23,7 @@ public class Wand extends Item{
 
     private static final Map<Block, Item> WAND_ITEM_WAVE =
         new ImmutableMap.Builder<Block, Item>()
-            .put(ModBlocks.MAGIC_BOOKSHELF.get(), ModItems.MAGIC_CORE.get())
+            .put(ModBlocks.GLYPH_STONE.get(), ModItems.MAGIC_GLYPH.get())
             .build();
     
     public Wand(Properties pProperties){
@@ -42,7 +42,9 @@ public class Wand extends Item{
                     positionClicked.getX(),positionClicked.getY(),positionClicked.getZ(),
                     new ItemStack(WAND_ITEM_WAVE.get(blockClicked), 1));   
 
+                level.destroyBlock(positionClicked, false);
                 level.addFreshEntity(entityItem);
+                
                 pContext.getItemInHand().hurtAndBreak(1, pContext.getPlayer(), p ->{
                     p.broadcastBreakEvent(pContext.getHand());
                 });
