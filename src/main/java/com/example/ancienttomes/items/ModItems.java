@@ -24,7 +24,7 @@ public class ModItems{
     () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MAGIC_ITEMS)));
 
     public static final RegistryObject<Item> MAGIC_GLYPH = ITEMS.register("magic_glyph",
-    () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MAGIC_ITEMS).durability(128)));
+    () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MAGIC_ITEMS)));
 
     //Wand items
     public static final RegistryObject<Item> MAGIC_WAND = ITEMS.register("magic_wand",

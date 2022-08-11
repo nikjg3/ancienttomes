@@ -7,7 +7,7 @@
     ],
     "key": {
         "#": {
-            "tag": "ancienttomes:crystal_chunk"
+            "item": "ancienttomes:crystal_chunk"
         },
         "result": {
             "item": "ancienttomes:magic_core"
