@@ -19,7 +19,12 @@ public class ModPlacedFeatures {
     public static final RegistryObject<PlacedFeature> CRYSTAL_ORE_PLACED = PLACED_FEATURES.register("crystal_ore_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.CRYSTAL_ORE.getHolder().get(),
                     commonOrePlacement(7, // VeinsPerChunk
-                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+                        HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+    
+    public static final RegistryObject<PlacedFeature> GLYPH_STONE_PLACED = PLACED_FEATURES.register("glyph_stone_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.CRYSTAL_ORE.getHolder().get(),
+                    commonOrePlacement(7, // VeinsPerChunk
+                        HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 
 
     public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {

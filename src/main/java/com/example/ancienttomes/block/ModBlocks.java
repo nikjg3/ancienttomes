@@ -28,16 +28,19 @@ public class ModBlocks{
     
     //Magic Ore
     public static final RegistryObject<Block> CRYSTAL_ORE = registerBlock("crystal_ore",
-    () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f)));
+    () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(8f)));
 
     //Magic Ore (Deepslate)
     public static final RegistryObject<Block> DEEPSLATE_CRYSTAL_ORE = registerBlock("deepslate_crystal_ore",
-    () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f)));
+    () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(8f)));
 
     //Glyph Stone
     public static final RegistryObject<Block> GLYPH_STONE = registerBlock("glyph_stone",
-    () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(8f)));
+    () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(4f)));
 
+    //Glyph Stone (Deepslate)
+    public static final RegistryObject<Block> DEEPSLATE_GLYPH_STONE = registerBlock("deepslate_glyph_stone",
+    () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(4f)));
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

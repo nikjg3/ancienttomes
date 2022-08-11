@@ -10,6 +10,7 @@
     "block.ancienttomes.crystal_ore": "Crystal Ore",
     "block.ancienttomes.deepslate_crystal_ore": "Deepslate Crystal Ore",
     "block.ancienttomes.glyph_stone": "Glyph Stone",
+    "block.ancienttomes.deepslate_glyph_stone": "Deepslate Glyph Stone",
 
     "itemGroup.MagicItemsTab": "Magic Items",
     "itemGroup.MagicBlocksTab": "Magic Blocks"
