@@ -20,7 +20,7 @@ public class ModItems{
     public static final RegistryObject<Item> MAGIC_CORE = ITEMS.register("magic_core",
     () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MAGIC_ITEMS)));
     
-    public static final RegistryObject<Item> MAGIC_CHUNK = ITEMS.register("magic_chunk",
+    public static final RegistryObject<Item> CRYSTAL_CHUNK = ITEMS.register("crystal_chunk",
     () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MAGIC_ITEMS)));
 
     public static final RegistryObject<Item> MAGIC_GLYPH = ITEMS.register("magic_glyph",

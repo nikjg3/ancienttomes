@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "ancienttomes:item/magic_chunk"
+        "layer0": "ancienttomes:item/crystal_chunk"
     }
 }
