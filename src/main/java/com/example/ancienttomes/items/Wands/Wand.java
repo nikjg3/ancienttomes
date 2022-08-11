@@ -18,12 +18,14 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.internal.TextComponentMessageFormatHandler;
+import com.mojang.logging.LogUtils;
 
 public class Wand extends Item{
 
     private static final Map<Block, Item> WAND_ITEM_WAVE =
         new ImmutableMap.Builder<Block, Item>()
             .put(ModBlocks.GLYPH_STONE.get(), ModItems.MAGIC_GLYPH.get())
+            .put(ModBlocks.DEEPSLATE_GLYPH_STONE.get(), ModItems.MAGIC_GLYPH.get())
             .build();
     
     public Wand(Properties pProperties){
@@ -39,10 +41,17 @@ public class Wand extends Item{
             
             if(canWaveWand(blockClicked)){
                 ItemEntity entityItem = new ItemEntity(level,
-                    positionClicked.getX(),positionClicked.getY(),positionClicked.getZ(),
+                    pContext.getPlayer().getX(),pContext.getPlayer().getY(),pContext.getPlayer().getZ(),
                     new ItemStack(WAND_ITEM_WAVE.get(blockClicked), 1));   
 
                 level.destroyBlock(positionClicked, false);
+
+                if(blockClicked.getName().getString().equals("Glyph Stone")){
+                    level.setBlock(positionClicked, Blocks.STONE.defaultBlockState(), 0);
+                }else{
+                    level.setBlock(positionClicked, Blocks.DEEPSLATE.defaultBlockState(), 0);
+                }
+
                 level.addFreshEntity(entityItem);
                 
                 pContext.getItemInHand().hurtAndBreak(1, pContext.getPlayer(), p ->{
