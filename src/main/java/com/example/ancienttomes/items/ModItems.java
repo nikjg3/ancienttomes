@@ -30,6 +30,9 @@ public class ModItems{
     public static final RegistryObject<Item> MAGIC_WAND = ITEMS.register("magic_wand",
     () -> new Wand(new Item.Properties().tab(ModCreativeModeTab.MAGIC_ITEMS).durability(128)));
 
+    //Tomes 
+    public static final RegistryObject<Item> ANCIENT_SCRIPTS = ITEMS.register("ancient_scripts",
+    () -> new Wand(new Item.Properties().tab(ModCreativeModeTab.MAGIC_ITEMS).durability(128)));
 
     public static final RegistryObject<Item> FLOATING_BOOK_SPAWN_EGG = ITEMS.register("floating_book_spawn_egg",
     () -> new ForgeSpawnEggItem(ModEntityTypes.FLOATING_BOOK, 14260801, 16777215,
