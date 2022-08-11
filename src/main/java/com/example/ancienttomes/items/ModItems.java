@@ -17,15 +17,19 @@ public class ModItems{
     public static final DeferredRegister<Item> ITEMS = 
         DeferredRegister.create(ForgeRegistries.ITEMS, AncientTomes.MODID);
 
-
-    public static final RegistryObject<Item> MAGIC_STICK = ITEMS.register("magic_stick",
-    () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MAGIC_ITEMS)));
-
     public static final RegistryObject<Item> MAGIC_CORE = ITEMS.register("magic_core",
     () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MAGIC_ITEMS)));
+    
+    public static final RegistryObject<Item> MAGIC_CHUNK = ITEMS.register("magic_chunk",
+    () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MAGIC_ITEMS)));
 
+    public static final RegistryObject<Item> MAGIC_GLYPH = ITEMS.register("magic_glyph",
+    () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MAGIC_ITEMS).durability(128)));
+
+    //Wand items
     public static final RegistryObject<Item> MAGIC_WAND = ITEMS.register("magic_wand",
     () -> new Wand(new Item.Properties().tab(ModCreativeModeTab.MAGIC_ITEMS).durability(128)));
+
 
     public static final RegistryObject<Item> FLOATING_BOOK_SPAWN_EGG = ITEMS.register("floating_book_spawn_egg",
     () -> new ForgeSpawnEggItem(ModEntityTypes.FLOATING_BOOK, 14260801, 16777215,

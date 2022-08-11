@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ancienttomes:magic_core",
+          "name": "ancienttomes:magic_chunk",
           "functions": [
             {
               "function": "set_count",

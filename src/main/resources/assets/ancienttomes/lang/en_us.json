@@ -1,8 +1,9 @@
 {
     "item.ancienttomes.magic_wand": "Magic Wand",
-    "item.ancienttomes.magic_stick": "Magic Stick",
+    "item.ancienttomes.magic_core": "Magic Chunk",
     "item.ancienttomes.magic_core": "Magic Core",
     "item.ancienttomes.floating_book_spawn_egg": "Floating Book Spawn Egg",
+    "item.ancienttomes.magic_glyph": "Glyph Shard",
 
     "block.ancienttomes.magic_bookshelf": "Magic Bookshelf",
     "block.ancienttomes.crystal_ore": "Crystal Ore",
