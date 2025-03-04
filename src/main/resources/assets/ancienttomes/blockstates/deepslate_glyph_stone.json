@@ -1,9 +1,0 @@
-{
-    "variants": {
-        "": [
-            {  "model" : "ancienttomes:block/glyphstone/deepslate_glyph_stone1"},
-            {  "model" : "ancienttomes:block/glyphstone/deepslate_glyph_stone2"},
-            {  "model" : "ancienttomes:block/glyphstone/deepslate_glyph_stone3"}
-        ]
-    }
-}
